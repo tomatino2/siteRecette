@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous | Tomiamiam</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="text-center mb-4">
+        <img src="../img/mode-sombre.png" alt="mode sombre" id="icon" style="cursor: pointer;">
+        <h1>Contactez-nous</h1>
+    </header>
+    <section class="contact-section container">
+        <p>Pour toute question, suggestion ou remarque, veuillez nous contacter en utilisant le formulaire ci-dessous :
+        </p>
+        <hr>
+        <form action="#" method="POST" class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" class="form-control" required>
+
+            <label for="email" class="mt-2">Email :</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+
+            <label for="message" class="mt-2">Message :</label>
+            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+
+            <button type="submit" class="btn btn-primary mt-3">Envoyer</button>
+        </form>
+    </section>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2024 Tomiamiam. Tous droits réservés.</p>
+        <nav>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="../index.html">Retour à l'accueil</a></li>
+                <li class="list-inline-item"><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        var icon = document.getElementById("icon");
+
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-theme");
+        }
+
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+
+            if (document.body.classList.contains("dark-theme")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette 1 | Tomiamiam</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="../mode-sombre.png" alt="mode sonmbre" id="icon">
+        <a href="#"><img class="icon" src="../chef (1).png" alt="Logo du site"></a>
+
+        <h1>Cookies au chocolat</h1>
+        <hr>
+
+    </header>
+
+    <section class="recette-detail">
+        <img src="../cookies.jpg" alt="Image de la recette 1">
+        <h2>Ingrédients :</h2>
+        <ul>
+            <li>Ingrédient 1</li>
+            <li>Ingrédient 2</li>
+            <!-- Ajouter les autres ingrédients ici -->
+        </ul>
+
+        <h2>Instructions :</h2>
+        <ol>
+            <li>Étape 1</li>
+            <li>Étape 2</li>
+            <!-- Ajouter les autres étapes ici -->
+        </ol>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tomiamiam. Tous droits réservés.</p>
+        <a href="../index.html">Retour à l'accueil</a>
+    </footer>
+
+
+
+
+    <script>
+        var icon = document.getElementById("icon");
+
+        // Charger le thème depuis le local storage au chargement de la page
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-theme");
+        }
+
+        icon.onclick = function () {
+            // Basculer entre le thème clair et sombre
+            document.body.classList.toggle("dark-theme");
+
+            // Enregistrer la préférence de thème dans le local storage
+            if (document.body.classList.contains("dark-theme")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

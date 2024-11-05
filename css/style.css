@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+#recettes-populaires {
+    width: 300px;
+    text-align: center;
+
+
+
+
+}
+
+#list-group-item {
+    background-color: aqua;
+
+}
+
+:root {
+    --background-color: #f8f9fa;
+    --text-color: black;
+    --light-text-color: #f8f9fa;
+    --header-footer-bg: #e9ecef;
+    --border-color: #dee2e6;
+    --link-color: black;
+    --hover-link-color: gray;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme {
+    --background-color: #212529;
+    --dark-background-color: #343a40;
+    --text-color: #f8f9fa;
+    --light-text-color: #f8f9fa;
+    --header-footer-bg: #1d2124;
+    --border-color: #495057;
+    --link-color: black;
+    --hover-link-color: gray;
+
+
+}
+
+.list-group {
+
+
+    background-color: blue;
+}
+
+#icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 30px;
+    /* Ajuster la taille si nécessaire */
+}
+
+h1,
+h2 {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-link-color);
+}
+
+header {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.iconepricibale {
+    width: 100px;
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+.card {
+    border: none;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    color: var(--text-color);
+    background-color: var(--header-footer-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.list-group-item a {
+    color: var(--link-color);
+}

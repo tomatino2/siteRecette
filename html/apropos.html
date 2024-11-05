@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/mode-sombre.png" alt="mode sonmbre" id="icon">
+        <h1>À propos de Tasty Tom</h1>
+    </header>
+    <hr>
+    <main class="about-section">
+        <p>Bienvenue sur Tasty Tom ! Je m'appelle Tom, et je suis passionné par la cuisine. Sur ce site, je partage mes
+            recettes préférées, testées et approuvées, pour vous inspirer en cuisine. Que vous soyez débutant ou
+            cuisinier expérimenté, j'espère que vous trouverez ici des idées savoureuses pour vos repas !</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tomiamiam. Tous droits réservés.</p>
+        <a href="../index.html">Retour à l'accueil</a>
+    </footer>
+    <script>
+        var icon = document.getElementById("icon");
+
+        // Charger le thème depuis le local storage au chargement de la page
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-theme");
+        }
+
+        icon.onclick = function () {
+            // Basculer entre le thème clair et sombre
+            document.body.classList.toggle("dark-theme");
+
+            // Enregistrer la préférence de thème dans le local storage
+            if (document.body.classList.contains("dark-theme")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+</body>
+
+</html>
